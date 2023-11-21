@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        #inputSection {
+            text-align: left;
+            display: inline-block;
+        }
+
+        #userForm {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input,
+        checkbox {
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .invalid-input {
+            border: 1px solid red;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 5px;
+        }
+
+        #submitBtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #tableSection {
+            text-align: center;
+        }
+
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        /* Add this to your existing styles */
+        .highlight-table {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            /* Change to your desired shadow effect */
+        }
+    </style>
+    <script defer src="index.js"></script>
+</head>
+
+<body>
+
+    <!-- Input Section -->
+    <section id="inputSection">
+        <h2>Registration Form</h2>
+
+        <!-- Form with input elements -->
+        <form id="userForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="dob">Dob:</label>
+            <input type="date" id="dob" name="dob" required>
+
+
+            <label for="acceptTerms">Accept all terms/Conditions</label>
+            <input type="checkbox" id="acceptTerms" name="acceptTerms">
+
+            <button type="button" id="submitBtn" onclick="submitForm()">Submit</button>
+        </form>
+    </section>
+
+    <!-- Submission Data Table Section -->
+    <section id="tableSection">
+        <h2>Entries</h2>
+
+        <!-- Empty table -->
+        <table id="userTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Dob</th>
+                    <th>Terms Accepted</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- No initial rows -->
+            </tbody>
+        </table>
+    </section>
+
+</body>
+
+</html>
